@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <% categories.forEach(function(category){ %>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%=category.title%>
+          </h5>
+          <% category.forums.forEach(function(forum) { %>
+          <div class="card-text row">
+            <div class="col">
+              <a href="forum/<%=forum.id%>"><%=forum.title%></a>
+            </div>
+          </div>
+          <%})%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
